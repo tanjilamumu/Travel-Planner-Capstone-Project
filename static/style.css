@@ -1,0 +1,304 @@
+/* ---------- GENERAL ---------- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ---------- HEADER & NAV ---------- */
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #4a90e2;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- FLASH MESSAGES ---------- */
+.flash {
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.flash.success { background-color: #d4edda; color: #155724; }
+.flash.danger { background-color: #f8d7da; color: #721c24; }
+.flash.info { background-color: #cce5ff; color: #004085; }
+
+/* ---------- CARDS / BOXES ---------- */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2, .card h3 {
+    margin-top: 0;
+}
+
+/* ---------- FORMS ---------- */
+form {
+    width: 100%;
+    text-align: center; /* center text inside the form */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 50%;             /* form field width */
+    padding: 10px 15px;
+    margin: 8px auto;       /* center horizontally */
+    display: block;         /* necessary for margin auto to work */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus,
+form input[type="time"]:focus,
+form textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none;
+}
+
+form button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ABD;
+    transform: scale(1.03);
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- TRIPS & ITINERARIES ---------- */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffffcc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #eaf2fb;
+    transform: translateY(-2px);
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+ul li form {
+    display: inline;
+}
+
+/* ---------- AUTH / REGISTER / LOGIN ---------- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.auth-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.auth-card p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.divider span {
+    flex: 1;
+    position: relative;
+}
+
+.divider span::before,
+.divider span::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+}
+
+.divider span::before {
+    left: -45%;
+}
+
+.divider span::after {
+    right: -45%;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-login button {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-login button.google { color: #db4437; }
+.social-login button.apple { color: #000; }
+.social-login button.facebook { color: #4267B2; }
+
+.social-login button:hover {
+    transform: scale(1.1);
+}
+
+.terms {
+    font-size: 0.8em;
+    color: #555;
+}
+
+.terms a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #555;
+    background: #f1f1f1;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 40px;
+}
+
+/* ---------- TABLES / FILES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* ---------- BUTTONS INLINE ---------- */
+.btn-inline {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.btn-inline:hover {
+    background-color: #357ABD;
+}

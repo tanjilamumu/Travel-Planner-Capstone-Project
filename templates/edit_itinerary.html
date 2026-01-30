@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Edit Itinerary for {{ trip.destination }}</h2>
+
+<form method="POST" action="{{ url_for('edit_itinerary', trip_id=trip.id, itinerary_id=itinerary.id) }}">
+    <label>Title:</label>
+    <input type="text" name="title" value="{{ itinerary.title }}" required><br><br>
+
+    <label>Description:</label>
+    <textarea name="description" required>{{ itinerary.description }}</textarea><br><br>
+
+    <label>Start Time (HH:MM):</label>
+    <input type="time" name="start_time" value="{{ itinerary.start_time.strftime('%H:%M') if itinerary.start_time else '' }}"><br><br>
+
+    <label>End Time (HH:MM):</label>
+    <input type="time" name="end_time" value="{{ itinerary.end_time.strftime('%H:%M') if itinerary.end_time else '' }}"><br><br>
+
+    <button type="submit">Update Itinerary</button>
+</form>
+
+<a href="{{ url_for('view_trip', trip_id=trip.id) }}">Back to Trip</a>
+{% endblock %}

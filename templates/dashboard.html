@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Dashboard - Welcome {{ user.first_name }}</h2>
+
+<h3>Add New Trip</h3>
+<form method="POST" action="{{ url_for('add_trip') }}">
+    Destination: <input type="text" name="destination" required><br><br>
+    Start Date: <input type="date" name="start_date" required><br>
+    End Date: <input type="date" name="end_date" required><br>
+    Notes: <input type="text" name="notes"><br>
+    <button type="submit">Add Trip</button>
+</form>
+
+<h3>My Trips</h3>
+<ul>
+    {% for trip in trips %}
+    <li>
+        <strong>{{ trip.destination }}</strong> ({{ trip.start_date }} - {{ trip.end_date }})<br><br>
+        <a href="{{ url_for('view_trip', trip_id=trip.id) }}">View</a><br>
+        <a href="{{ url_for('edit_trip', trip_id=trip.id) }}">Edit</a>
+        <form action="{{ url_for('delete_trip', trip_id=trip.id) }}" method="POST" style="display:inline;">
+            <button type="submit" onclick="return confirm('Delete this trip?')">Delete</button>
+        </form>
+    </li>
+    {% else %}
+    <li>No trips yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
