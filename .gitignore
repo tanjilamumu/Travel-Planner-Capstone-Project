@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Database
+*.db
+
+# Secrets / Keys
+*.pem
+aws/secrets.py
+config.py
+
+# AWS packages / local builds
+aws/dist/
+
+# Local uploads
+uploads/
+
+# OS files
+.DS_Store
+
+# Large files
+*.zip
+
+# Logs
+*.log

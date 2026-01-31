@@ -1,6 +1,6 @@
 Flask
 Flask-SQLAlchemy
-Flask-Login
 pymysql
 boto3
 werkzeug
+python-dotenv
